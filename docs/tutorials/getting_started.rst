@@ -95,7 +95,7 @@ or Python :class:`dict <python:dict>`:
     as_ndarray = numpy.asarray(my_iterable)
 
     # As a Python dict
-    as_dict = {'x': x[0], 'y': x[1] for x in my_iterable}
+    as_dict = { 'x': [row[0] for row in my_iterable], 'y': [row[1] for row in my_iterable]}
 
 Now, we can consider our data "wrangled" and ready for visualization.
 
