@@ -87,15 +87,18 @@ Alternatively, we can convert ``my_iterable`` into a
 or Python :class:`dict <python:dict>`:
 
   .. code-block:: python
-
+    # Import Pandas library
+    import pandas as pd
     # As a Pandas DataFrame
-    df = pandas.DataFrame(my_iterable, columns=['x', 'y'])
+    df = pd.DataFrame(my_iterable, columns=['x', 'y'])
 
+    # Import NumPy library
+    import numpy as np
     # As a Numpy ndarray
-    as_ndarray = numpy.asarray(my_iterable)
+    as_ndarray = np.asarray(my_iterable)
 
     # As a Python dict
-    as_dict = {'x': x[0], 'y': x[1] for x in my_iterable}
+    as_dict = { 'x': [row[0] for row in my_iterable], 'y': [row[1] for row in my_iterable]}
 
 Now, we can consider our data "wrangled" and ready for visualization.
 
